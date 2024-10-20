@@ -31,6 +31,9 @@ ResNeXt and Xception models perform inference on the facial frames.
 Both models are pretrained on large deepfake datasets.
 Ensemble Prediction:
 The pipeline combines the predictions of ResNeXt and Xception using a weighted averaging approach (r1 = 0.46441 for ResNeXt and r2 = 0.52189 for Xception).
+
+
+
 ![image](https://github.com/user-attachments/assets/ed1d9630-605a-402f-ab11-6b37610bb43c)
 
 
