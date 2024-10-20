@@ -2,15 +2,17 @@
 group submission for the 2024 AI Hackflow organized by DeepFlow
 
 # Xception-ResNeXt Ensemble for Deepfake Detection (Fine-tuned with UADFV Dataset)
-Project Overview
+
+Project Overview: 
 This project implements an ensemble inference pipeline for detecting deepfakes in video data using two powerful deep learning models: Xception and ResNeXt. It focuses on enhancing deepfake detection accuracy by leveraging the strengths of both models, with face detection integrated using BlazeFace to focus on facial regions in the videos.
 
-Key Features
+Key Features: 
 Deepfake Detection Ensemble: Combines predictions from both Xception and ResNeXt models for robust video analysis.
 BlazeFace Integration: Efficient face detection that preprocesses video frames to extract facial regions for deepfake analysis.
 Frame-per-Video Technique: Analyzes a fixed number of frames (e.g., 64) per video, reducing computational costs while maintaining accuracy.
 Weighted Averaging for Ensemble: Final prediction is a weighted combination of Xception and ResNeXt results, fine-tuned to optimize performance.
-Use Cases
+
+Use Cases:
 The project is particularly useful for:
 
 Real-time deepfake detection: Applied in areas such as political media analysis, national security, and social media monitoring.
@@ -21,7 +23,7 @@ Pretrained Xception Model: Fine-tuned on deepfake datasets such as FaceForensics
 Available here: Deepfake Xception Trained Model on Kaggle
 ResNeXt: A grouped convolution-based deep learning model used for efficient and scalable deepfake detection.
 
-Pipeline Overview
+Pipeline Overview: 
 Video Frame Extraction: The system selects a specific number of frames (e.g., 64) from each video using OpenCV.
 Face Detection (BlazeFace): The BlazeFace model detects faces in the extracted frames, which are then cropped and resized to focus on facial regions.
 Deepfake Inference:
@@ -31,7 +33,13 @@ Ensemble Prediction:
 The pipeline combines the predictions of ResNeXt and Xception using a weighted averaging approach (r1 = 0.46441 for ResNeXt and r2 = 0.52189 for Xception).
 ![image](https://github.com/user-attachments/assets/ed1d9630-605a-402f-ab11-6b37610bb43c)
 
+
+
+
 Final Output: The results for each video (real or fake) are saved in a CSV file.
+
+
+
 ![image](https://github.com/user-attachments/assets/4854801f-def2-44be-bef3-5a146288471b)
 ![image](https://github.com/user-attachments/assets/230815c3-c04a-44de-beeb-94d12cc59054)
 
